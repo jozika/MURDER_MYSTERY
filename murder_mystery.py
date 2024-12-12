@@ -1,21 +1,39 @@
 
 # murder mystery 
 
-intro = ("Välkomen det här vart spel.......")
+print("Välkommen på vart spel murdure mystry..")
 
-print(intro)
+def clue1(vem):
 
-clue1 = input(""" 
-                 1. ignonera gästen
-                 2. frågasätta gästen
-                 3. slå gästen""")
+    for x in vem:
 
-if clue1 == "1":
-    print("Spelt förstätter")
+        if x == "a":
+            print ("spelet försätter")
+        
+        elif x == "b":
+            print("Råka spela vin")
+        
+        elif x == "c":
+            print("Va va det för")
 
-elif clue1 == "2":
-    print("jag lovar min partner var bredvid mig ")
 
-elif clue1 == "3":
-    print ("Va va det för")
 
+ledtrad1 = input(""" 
+                    1. Gå ut 
+                    2. Frågställa gästen 
+                    3. Slå gästen
+        """)
+
+
+if ledtrad1 == "1":
+    clue1("a")
+
+if ledtrad1 == "2":
+   clue1("b")
+   print("Lovar min fru var bredvid mig")
+
+if ledtrad1 == "3":
+    clue1("c")
+
+
+    

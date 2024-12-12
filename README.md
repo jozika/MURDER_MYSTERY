@@ -10,15 +10,28 @@ Mer information kommer...
 
 # De olika scen som är med 
 
-Scen 1(festen gick fel):
+Scen 1(festen gick fel)
+
 spelet börjar i ett hus där någon dör, du som är detektiven ska försöka hitta mördaren. Genom att hitta bevis. 
+
 Scen 2 (Samla bevis)
 I detta steg kommer du att leta efter bevis, där du kan använda dem till att hitta mördaren. 
 
 Påminnelse, det är här du kommer att kunna hitta bevis, nästa steg måste du göra ett val av vem som är mördaren. 
+
 Scen 3 (Vem är mördaren)
 Det är här du gör ett val och väljer vem som är mördaren bland de 7 personerna i festen, med hjälp av bevisen du har samlat in. Om du misslyckas med att hitta mördaren kommer spelet sluta.
 
 Observera, du tre chanser att hitta mördaren. 
+
+# Har finns de karaktärer som är med, kanske kommer mer...
+
+Charakterer..
+Gäst 1 - Rosa hår,               
+Gäst 2 - blodfläck på tröjan 
+Gäst 3 -  Rolex är sönder 
+Gäst 4 - cut i fingret
+Gäst 5 - ljuger mycket
+Gäst 6 - död: glas bitar nära kroppen
 
 
