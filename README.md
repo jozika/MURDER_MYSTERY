@@ -35,3 +35,8 @@ Gäst 5 - ljuger mycket
 Gäst 6 - död: glas bitar nära kroppen
 
 
+# WE at da end
+
+Vi är klara men att förbredda vårt spel, och har även börjat med koden.
+
+
