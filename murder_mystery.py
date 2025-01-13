@@ -1,6 +1,6 @@
 
 #intro funktion, the start of the screen, it's outside of the menyval
-
+inventory = []
 def intro(game):   
     name = input("Enter your name ")
     game_n= "Murdure Mystery" 
@@ -35,21 +35,31 @@ def scenuno():
 
     if directionuno == "bedroom":
         print("Your in the bedroom, but it seems theres no one \n however the bathroom door is open")
-        print("If you want to go to the bathroom, just type yes \n And if you want to go back to the livingroom  or stay\n just type stay or livingroom ")
+        print("If you want to go to the bathroom, just type bathroom \n And if you want to go back to the livingroom  or stay\n just type stay or livingroom ")
         chektoa = input ("")
 
-        if chektoa == "yes": 
+        if chektoa == "bathroom": 
             print("Gosh.. you see a dead corps and a ledy right beside the body, it seems shes uncoinsas")
         
         elif chektoa == "stay": 
             print("The bedroom, seems larger than the livingroom")
-        
+            input("""
+                       A. Walk around the house
+                       B. Look for the bathroom
+                       C. Star eating Pizza 
+                                           """)
+       
+       
+
         elif chektoa == "livingroom":
             print("Gosh my head hurts")
             print("I must've halusanating")
 
     else: 
         print("Where is everyone, i need som water")
+
+    
+       
 
 
 while True:
