@@ -41,16 +41,17 @@ def scenuno():
         if chektoa == "bathroom": 
             print("Gosh.. you see a dead corps and a ledy right beside the body, it seems shes uncoinsas")
         
-        elif chektoa == "stay": 
+        elif chektoa == "stay": # jag håller på lägga till några saker, den fungerar inte än, håller på fixa den
             print("The bedroom, seems larger than the livingroom")
-            input("""
+            print("chose one of the option listet, to continue")
+            option =  input("""
                        A. Walk around the house
                        B. Look for the bathroom
                        C. Star eating Pizza 
-                                           """)
+                                           
+                       """)
        
        
-
         elif chektoa == "livingroom":
             print("Gosh my head hurts")
             print("I must've halusanating")
@@ -59,9 +60,18 @@ def scenuno():
         print("Where is everyone, i need som water")
 
     
+    def con():
+
+        if option == "A":
+            print("It seems everyone is sleep, do i've to wake them up")
+        
+        elif option == "B": 
+            print("I need to be")
+        
+        elif option == "C": 
+            print("uGH, this pizza taste nasty and hard")
+  
        
-
-
 while True:
 
     menyval = input("""
@@ -79,6 +89,9 @@ while True:
 
     if menyval == "2": 
         scenuno()
+        print(option)
+        con()
+
 
     if menyval == "3": 
         pass
