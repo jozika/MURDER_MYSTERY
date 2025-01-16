@@ -1,6 +1,6 @@
 
 #intro funktion, the start of the screen, it's outside of the menyval
-inventory = []
+
 def intro(game):   
     name = input("Enter your name ")
     game_n= "Murdure Mystery" 
@@ -23,11 +23,10 @@ def g_rules():
             """)
 
 
-
 #Start the game, now it's hard, make game very simple, no complication. 
 
 
-def scenuno():
+def play():
     print("you wake up on someone screaming, the sound looks like it's coming from bedroom")
     print("Go and check what is wrong by typing bedroom, or stay by typing stay ")
 
@@ -41,15 +40,10 @@ def scenuno():
         if chektoa == "bathroom": 
             print("Gosh.. you see a dead corps and a ledy right beside the body, it seems shes uncoinsas")
         
+
         elif chektoa == "stay": # jag håller på lägga till några saker, den fungerar inte än, håller på fixa den
             print("The bedroom, seems larger than the livingroom")
             print("chose one of the option listet, to continue")
-            option =  input("""
-                       A. Walk around the house
-                       B. Look for the bathroom
-                       C. Star eating Pizza 
-                                           
-                       """)
        
        
         elif chektoa == "livingroom":
@@ -59,18 +53,26 @@ def scenuno():
     else: 
         print("Where is everyone, i need som water")
 
+        quit()
     
-    def con():
+def stayoption():
+     global option
+     option = input("""
+                     A. Walk around the house
+                     B. Look for the bathroom
+                     C. Star eating Pizza 
+                                                    
+                                """)
 
-        if option == "A":
-            print("It seems everyone is sleep, do i've to wake them up")
-        
-        elif option == "B": 
-            print("I need to be")
-        
-        elif option == "C": 
-            print("uGH, this pizza taste nasty and hard")
-  
+     if option == "A":
+                    print("It seems everyone is sleep, do i've to wake them up")          
+     elif option == "B": 
+          print("I need to be")       
+
+     elif option == "C": 
+           print("uGH, this pizza taste nasty and hard")
+
+                    
        
 while True:
 
@@ -88,11 +90,9 @@ while True:
         g_rules()
 
     if menyval == "2": 
-        scenuno()
-        print(option)
-        con()
-
-
+        play()
+        stayoption()
+             
     if menyval == "3": 
         pass
 
