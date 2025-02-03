@@ -1,103 +1,65 @@
 
-#intro funktion, the start of the screen, it's outside of the menyval
+import pyfiglet # Här har jag laddad ner pyfiglet libary, där kan vi skapa ASCII texter utan att behöva kopiera de.
 
-def intro(game):   
-    name = input("Enter your name ")
+ascii_text = pyfiglet.figlet_format("Murder Mystery", font= "big") # Skapad en variabel, stor text på spelets namn, ''.figlet_format'' är en funktion som ändrar texter till ASCII art
+
+print(ascii_text)
+
+
+#intron
+def intro(game):   # Intron visas after man har skrivt in sitt namn, 
+    name = input("Skriv in ditt namn: ")
     game_n= "Murdure Mystery" 
-    print(f"Xx{'_' * 60}xX\nWellcome to {game_n}, {name}\n {game} \nXx{'_' * 60}xX")  # Here is all varibales connected
+    GL_ACSII = pyfiglet.figlet_format("Lycka Till!!!", font= "big") # GL står för Goodluck
+    regler = ("""                           
+                För att vinna spelet:
+              
+                    A. Hitta mördaren
+                    B. Ingen får lämna huset förrän du hittar mördaren
+                    C. Du har tre chanser att gissa vem som är mördaren
+                        """) # Regler har ändrats, det är bätter om man har i början av spelet
+    print(f"Xx{'_' * 60}xX\nVälkommen till {game_n}, {name}\n{game} \nXx{'_' * 60}xX")  # Dash symbol har det används här, där gångaras det med 60 för att få det antal man behöver
+    print(f"{regler}\n {GL_ACSII}")
 
 # The intro is the funktions name, there beholds the argument game, which's now the text 
-intro("Your invited to a house party by your coworkers.\n While everyone was partying someone got murdured.\n Solve the case using clues, interviews, and observations.")
+intro("Du är inbjuden till en hemmafest av dina kollegor.\nMedan alla festade blev någon mördad.\nLös fallet med hjälp av ledtrådar, intervjuer och observationer.")
 
+inventory = []
 
-# Make the rules, it has to be easy
-
-def g_rules():
-    print(f"""
-         Xx{'_' * 60}xX
-            No one shoukd leave house, untill you find the murdurer
-            You ge 3 chanses to guess who's the murdurer
-            If you lose all 3, you lose the game and the game will End
-            To win the game you just have to find the murdurer 
-          Xx{'_' * 60}xX
-            """)
-
-
-#Start the game, now it's hard, make game very simple, no complication. 
-
-
-def play():
-    print("you wake up on someone screaming, the sound looks like it's coming from bedroom")
-    print("Go and check what is wrong by typing bedroom, or stay by typing stay ")
-
-    directionuno = input("")
-
-    if directionuno == "bedroom":
-        print("Your in the bedroom, but it seems theres no one \n however the bathroom door is open")
-        print("If you want to go to the bathroom, just type bathroom \n And if you want to go back to the livingroom  or stay\n just type stay or livingroom ")
-        chektoa = input ("")
-
-        if chektoa == "bathroom": 
-            print("Gosh.. you see a dead corps and a ledy right beside the body, it seems shes uncoinsas")
-        
-
-        elif chektoa == "stay": # jag håller på lägga till några saker, den fungerar inte än, håller på fixa den
-            print("The bedroom, seems larger than the livingroom")
-            print("chose one of the option listet, to continue")
-       
-       
-        elif chektoa == "livingroom":
-            print("Gosh my head hurts")
-            print("I must've halusanating")
-
-    else: 
-        print("Where is everyone, i need som water")
-
-        quit()
+def starta_spel():
+    print("Du vaknar av en skrikande röst, det låter som om den kommer från toan.\nSe vad som pågår? (ja/nej)")
+    direction = input("> ").lower()  # Gör att det man skriva med små eller stora posktiver
     
-def stayoption():
-     global option
-     option = input("""
-                     A. Walk around the house
-                     B. Look for the bathroom
-                     C. Star eating Pizza 
-                                                    
-                                """)
-
-     if option == "A":
-                    print("It seems everyone is sleep, do i've to wake them up")          
-     elif option == "B": 
-          print("I need to be")       
-
-     elif option == "C": 
-           print("uGH, this pizza taste nasty and hard")
-
-                    
-       
-while True:
-
-    menyval = input("""
-                    1. Rules
-                    2. Start the game
-                    3. Inventory         
-                    4. End the game 
-
-                """)
+    if direction == "nej":
+        print("Jag hallucinera säkert... Jag går och dricker vatten för att glömma det.")
+    else:
+        print("...")  # Här ska läggas till mer kod senare
     
+    return direction  # Returnera direction istället för att använda global
 
+def direction_ja(direction):
+    if direction == "ja":
+        print("Jäklar! Du ser en död kropp och en kvinna med rosa hår, hon ser medvetslös ut.")
 
-    if menyval == "1": 
-        g_rules()
+        fortsättning1 = input("""Välj ett av de 3 alternativen:
+        A. Väcka kvinnan
+        B. Spring och lås ytterdörren
+        C. Ropa på hjälp
+        > """).upper()  # Gör att det man skriva med små eller stora posktiver
+    
+        if fortsättning1 == "A":
+            print("Hon vaknar inte alls... Hämta kallt vatten.")
+        elif fortsättning1 == "B":
+            print("Obs... Du behöver en nyckel.")
+        elif fortsättning1 == "C":
+            print("Du förlorar.")
+        else:
+            print("Ogiltigt val, försök igen.")
 
-    if menyval == "2": 
-        play()
-        stayoption()
-             
-    if menyval == "3": 
-        pass
+# Starta spelet och skicka direction till nästa funktion
+val = starta_spel()
+direction_ja(val)
 
-    if menyval == "4": 
-        quit("")
 
 
     
