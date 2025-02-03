@@ -32,8 +32,6 @@ def starta_spel():
     
     if direction == "nej":
         print("Jag hallucinera säkert... Jag går och dricker vatten för att glömma det.")
-    else:
-        print("...")  # Här ska läggas till mer kod senare
     
     return direction  # Returnera direction istället för att använda global
 
